@@ -108,3 +108,12 @@ function setup_ajax_form(form, done) {
 		return json;
 	};
 })(jQuery);
+
+var hashloaders = {};
+
+$(window).on('hashchange', function() {
+	var hash = location.hash.split("#")[1];
+	if (hash in hashloaders) {
+		hashloaders[hash]();
+	}
+});
