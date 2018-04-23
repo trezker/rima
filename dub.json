@@ -1,0 +1,13 @@
+{
+	"name": "rima",
+	"description": "Ring Market.",
+	"copyright": "Copyright © 2018, Anders Andersson",
+	"authors": ["Anders Andersson"],
+	"dependencies": {
+		"dlib": "~>0.12.2",
+		"vibe-d": ">=0.7.31",
+		"dauth": "~>0.6.3"
+	},
+	"lflags": ["-L/usr/local/lib64"],
+	"versions": ["VibeDefaultMain"]
+}

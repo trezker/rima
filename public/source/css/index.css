@@ -1,0 +1,7 @@
+.maingrid {
+	display: grid;
+	grid-template-rows: 3em auto;
+	height: 100vh;
+}
+
+input[type="checkbox"] { height:auto }
