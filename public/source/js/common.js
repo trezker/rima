@@ -113,7 +113,14 @@ var hashloaders = {};
 
 $(window).on('hashchange', function() {
 	var hash = location.hash.split("#")[1];
+	if(!hash)
+		hash = "";
+	console.log(hash);
 	if (hash in hashloaders) {
 		hashloaders[hash]();
 	}
+});
+
+ajax_text('/source/text/googleapikey.txt').done(function(data) {
+	$("body").append('<script async defer src="https://maps.googleapis.com/maps/api/js?key=' + data + '&libraries=places"></script>');
 });

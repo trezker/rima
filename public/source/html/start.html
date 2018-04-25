@@ -1,0 +1,10 @@
+<div>
+	<div>
+		<button class="btn btn-link" data-bind="click: open_market_map">Market map</button>
+	</div>
+	<div data-bind="foreach: saved_markets">
+		<div>
+			<button class="btn btn-link" data-bind="click: open_market, text: name"></button>
+		</div>
+	</div>
+</div>
