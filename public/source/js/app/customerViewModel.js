@@ -17,6 +17,16 @@ var customerViewModel = function() {
 			center: california,
 			zoom: 13
 		});
+
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(function navigatorPosition(position) {
+				var center = {
+					lat: position.coords.latitude, 
+					lng: position.coords.longitude
+				};
+				self.map.setCenter(center);
+			});
+		}
 	}
 };
 
