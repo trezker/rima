@@ -124,3 +124,7 @@ $(window).on('hashchange', function() {
 ajax_text('/source/text/googleapikey.txt').done(function(data) {
 	$("body").append('<script async defer src="https://maps.googleapis.com/maps/api/js?key=' + data + '&libraries=places"></script>');
 });
+
+$(function() {
+	hashloaders[""]();
+});
